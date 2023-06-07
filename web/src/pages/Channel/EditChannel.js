@@ -487,6 +487,40 @@ const EditChannel = () => {
             </Form.Group>
           </>
         );
+      case 'fcm':
+        return(
+            <>
+              <Message>
+                通过 Google FireBase Cloud 推送。首先向
+                <a href='https://firebase.google.com/' target='_blank'>Google FireBase官网</a>创建项目，
+                下载admin sdk所需的json文件。<br/>
+                手机安装已待调试的app，调用api获取手机推送注册的设备token。
+
+              </Message>
+              <Form.Group widths='equal'>
+                <Form.TextArea
+                    label='FireBase Admin sdk 鉴权所需 json'
+                    name='secret'
+                    onChange={handleInputChange}
+                    value={inputs.secret}
+                    placeholder='文本编辑器打开下载的.json文件，将其完整内容填写在当前文本框内'
+                    style={{ minHeight: 200, fontFamily: 'JetBrains Mono, Consolas' }}
+                />
+              </Form.Group>
+              <Form.Group widths={2}>
+                <Form.Input
+                    label='设备token'
+                    name='account_id'
+                    type='text'
+                    onChange={handleInputChange}
+                    autoComplete='off'
+                    value={inputs.account_id}
+                    placeholder='手机应用注册FCM服务后生成的token'
+                />
+              </Form.Group>
+            </>
+
+        );
       case 'telegram':
         return (
           <>

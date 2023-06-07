@@ -23,6 +23,8 @@ func SendMessage(message *model.Message, user *model.User, channel_ *model.Chann
 		return SendBarkMessage(message, user, channel_)
 	case model.TypeClient:
 		return SendClientMessage(message, user, channel_)
+	case model.TypeFcm:
+		return SendFirebaseCloudMessage(message, user, channel_)
 	case model.TypeTelegram:
 		return SendTelegramMessage(message, user, channel_)
 	case model.TypeDiscord:

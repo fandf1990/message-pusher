@@ -9,6 +9,7 @@ export const CHANNEL_OPTIONS = [
   },
   { key: 'corp', text: '企业微信群机器人', value: 'corp', color: '#019d82' },
   { key: 'lark', text: '飞书群机器人', value: 'lark', color: '#00d6b9' },
+  { key: 'fcm',text:"谷歌FCM推送",value:'fcm',color:'#A9CD55'},
   {
     key: 'lark_app',
     text: '飞书自建应用',

@@ -12,6 +12,7 @@ const (
 	TypeCorp              = "corp"
 	TypeLark              = "lark"
 	TypeDing              = "ding"
+	TypeFcm               = "fcm"
 	TypeTelegram          = "telegram"
 	TypeDiscord           = "discord"
 	TypeBark              = "bark"
